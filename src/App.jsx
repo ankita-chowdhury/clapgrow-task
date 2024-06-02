@@ -5,7 +5,7 @@ import UserList from './components/UserList'
 import axios from 'axios';
 
 function App() {
- const[userList,setUserList]=useState([]);
+ const[userData,setUserData]=useState([]);
 
  useEffect(()=>{
   apiCall();
@@ -15,17 +15,17 @@ function App() {
   const path=`https://jsonplaceholder.typicode.com/users`;
   try{
     const response = await axios.get(path);
-    console.log("response",response.data);
-    setUserList(response.data);
+    // console.log("response",response.data);
+    setUserData(response.data);
   }
   catch(e){
       console.log("api call failed",e);
   }
  }
-
+//  console.log("userData",userData);
   return (
     <>
-    <UserList/>
+    <UserList userData={userData}/>
     </>
   )
 }
