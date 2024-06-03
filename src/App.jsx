@@ -3,10 +3,11 @@ import { useEffect, useState } from 'react'
 import './App.css'
 import UserList from './components/UserList'
 import axios from 'axios';
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import UserDetail from './components/UserDetail';
 
 function App() {
  const[userData,setUserData]=useState([]);
- 
 
  useEffect(()=>{
   apiCall();
@@ -16,17 +17,27 @@ function App() {
   const path=`https://jsonplaceholder.typicode.com/users`;
   try{
     const response = await axios.get(path);
-    // console.log("response",response.data);
     setUserData(response.data);
   }
   catch(e){
-      console.log("api call failed",e);
+      console.log("API call failed",e);
   }
  }
-//  console.log("userData",userData);
+
+
+const router = createBrowserRouter([
+  {
+    path:"/",
+    element: <UserList userData={userData}/>
+  },
+  {
+    path:"user/:id",
+    element:<UserDetail/>
+  }
+])
   return (
     <>
-    <UserList userData={userData}/>
+    <RouterProvider router={router}/>
     </>
   )
 }
