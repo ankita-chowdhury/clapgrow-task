@@ -38,7 +38,7 @@ const UserDetail = () => {
             <hr />
             <p><span className='userDetailAttr'>Email</span>: {user.email}</p>
             <hr />
-            <p><span className='userDetailAttr'>Phone</span>: {user.phone}</p>
+            <p className="responsiveField"><span className='userDetailAttr'>Phone</span>: {user.phone}</p>
             <hr />
             <div className='addressContainer'>
               <span className='userDetailAttr'>Address</span>:
