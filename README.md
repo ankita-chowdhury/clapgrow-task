@@ -22,38 +22,23 @@ This project is a simple React application that retrieves and displays a list of
 
 5. **Code Quality:**
    - Follows best practices for code structure and organization.
-   - Uses functional components and hooks.
+   - Used functional components and hooks.
 
 ## Technical Requirements
 
 - **React:**
-  - Uses the latest version of React.
-  - Utilizes functional components and hooks (`useState`, `useEffect`, etc.).
+  - Used the latest version of React.
+  - Utilizes functional components and hooks (`UseState`, `useEffect`, `useParams` etc.).
 
 - **API:**
-  - Uses the JSONPlaceholder API to fetch user data (https://jsonplaceholder.typicode.com/users).
-
+  - Used the JSONPlaceholder API to fetch user data list (https://jsonplaceholder.typicode.com/users).
+  - Used the JSONPlaceholder API to fetch user details (https://jsonplaceholder.typicode.com/users/${id}).
 - **Routing:**
-  - Uses React Router for navigation between the User List View and User Detail View.
+  - Used React Router for navigation between the User List View and User Detail View.
 
 - **State Management:**
-  - Uses React's built-in state management with hooks.
+  - Used React's built-in state management with hooks.
 
 - **Styling:**
-  - Uses plain CSS for styling.
-
-## File Structure
-
-src/
-├── components/
-│   ├── UserList.js
-│   ├── UserDetail.js
-│   ├── SearchBox.js
-│   └── ErrorMessage.js
-├── pages/
-│   ├── UserListView.js
-│   ├── UserDetailView.js
-├── App.js
-├── index.js
-├── App.css
-└── index.css
+  - Used plain CSS for styling.
+  - Used Material UI for adding loader
